@@ -26,8 +26,12 @@ public class JpaMain {
             //이렇게 쿼리를 바인딩하는것도 가능하다.
             query.setParameter("username", "훈영");
             // :이름 방식으로 해도되구 ?1 ?2 이렇게 사용도 가능하지만 순서가 밀릴수있다. 사용자제
-            
+
+
+
+
             Member singleResult = (Member)query.getSingleResult();
+            //이 경우 singleResult의 값도 영속성 컨텍스트에서 관리한다.
             System.out.println(singleResult.toString());
 
 
